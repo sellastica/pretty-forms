@@ -1,24 +1,24 @@
 {
-	"name": "sellastica/php-generator",
+	"name": "sellastica/pretty-forms",
 	"type": "project",
-	"homepage": "https://github.com/sellastica/php-generator",
+	"homepage": "https://github.com/sellastica/pretty-forms",
 	"license": "proprietary",
 	"authors": [
 		{
 			"name": "Tomáš Krejčí",
-			"email": "tomas@differencemakers.cz"
+			"homepage": "http://www.sellastica.com"
 		}
 	],
 	"require": {
 		"php": ">=7.1",
 		"nette/utils": "^2.4",
-		"sellastica/reflection": "~1.0"
+		"nette/forms": "^2.4"
 	},
 	"require-dev": {
 	},
 	"autoload": {
 		"psr-4": {
-			"Sellastica\\PhpGenerator\\": "src/"
+			"Sellastica\\PrettyForms\\": "src/"
 		}
 	}
 }
