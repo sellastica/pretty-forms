@@ -1,5 +1,5 @@
 <?php
-namespace Sellastica\Forms\DI;
+namespace Sellastica\PrettyForms\DI;
 
 use Nette\DI\CompilerExtension;
 use Nette\Forms\Container;

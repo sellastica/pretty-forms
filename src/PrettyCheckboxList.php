@@ -1,5 +1,5 @@
 <?php
-namespace Sellastica\Forms;
+namespace Sellastica\PrettyForms;
 
 use Nette\Forms\Controls\BaseControl;
 use Nette\Forms\Controls\CheckboxList;
