@@ -19,15 +19,15 @@ class FormsExtension extends CompilerExtension
 	{
 		//checkbox
 		ObjectMixin::setExtensionMethod(Container::class, 'addPrettyCheckbox', function (Container $container, $name, $label = null) {
-			return $container[$name] = new Sellastica\Forms\PrettyCheckbox($label);
+			return $container[$name] = new Sellastica\PrettyForms\PrettyCheckbox($label);
 		});
 		//checkbox list
 		ObjectMixin::setExtensionMethod(Container::class, 'addPrettyCheckboxList', function (Container $container, $name, $label = null, array $items = null) {
-			return $container[$name] = new Sellastica\Forms\PrettyCheckboxList($label, $items);
+			return $container[$name] = new Sellastica\PrettyForms\PrettyCheckboxList($label, $items);
 		});
 		//radio list
 		ObjectMixin::setExtensionMethod(Container::class, 'addPrettyRadioList', function (Container $container, $name, $label = null, array $items = null) {
-			return $container[$name] = new Sellastica\Forms\PrettyRadioList($label, $items);
+			return $container[$name] = new Sellastica\PrettyForms\PrettyRadioList($label, $items);
 		});
 	}
 }
