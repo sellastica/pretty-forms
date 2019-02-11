@@ -27,7 +27,7 @@ class BootstrapCheckbox extends Checkbox
 	 */
 	public function getControl()
 	{
-		$el = Html::el('div')->setAttribute('class', 'checkbox ' . ($this->labelClass ?? 'checkbox-info'));
+		$el = Html::el('div')->setAttribute('class', 'checkbox ' . ($this->labelClass ?? 'checkbox-primary'));
 		$el->insert(0, $this->getControlPart());
 		$el->insert(1, $this->getLabelPart());
 
