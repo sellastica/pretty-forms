@@ -33,5 +33,9 @@ class FormsExtension extends CompilerExtension
 		ObjectMixin::setExtensionMethod(Container::class, 'addBootstrapCheckbox', function (Container $container, $name, $label = null) {
 			return $container[$name] = new Sellastica\PrettyForms\BootstrapCheckbox($label);
 		});
+		//bootstrap radio list
+		ObjectMixin::setExtensionMethod(Container::class, 'addBootstrapRadioList', function (Container $container, $name, $label = null, array $items = null) {
+			return $container[$name] = new Sellastica\PrettyForms\BootstrapRadioList($label, $items);
+		});
 	}
 }
