@@ -36,6 +36,7 @@ class BootstrapRadioList extends RadioList
 					'checked' => $key === $this->value,
 					'disabled' => $this->disabled,
 					'data-nette-rules:' => [key($items) => $input->attrs['data-nette-rules']],
+					'value' => $key,
 				])));
 
 			$label = Html::el('label')
