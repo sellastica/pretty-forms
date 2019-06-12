@@ -54,6 +54,7 @@ class BootstrapCheckbox extends Checkbox
 				->data('content', $this->tooltipDescription)
 				->data('toggle', 'popover')
 				->data('container', 'body')
+				->data('html', '1')
 			);
 		}
 
