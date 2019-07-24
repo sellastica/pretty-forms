@@ -9,6 +9,8 @@ class BootstrapCheckbox extends Checkbox
 	/** @var string|null */
 	private $labelClass;
 	/** @var string|null */
+	private $wrapperClass;
+	/** @var string|null */
 	private $tooltipTitle;
 	/** @var string|null */
 	private $tooltipDescription;
@@ -21,6 +23,16 @@ class BootstrapCheckbox extends Checkbox
 	public function setLabelClass(?string $class): BootstrapCheckbox
 	{
 		$this->labelClass = $class;
+		return $this;
+	}
+
+	/**
+	 * @param null|string $class
+	 * @return $this
+	 */
+	public function setWrapperClass(?string $class): BootstrapCheckbox
+	{
+		$this->wrapperClass = $class;
 		return $this;
 	}
 
@@ -40,9 +52,14 @@ class BootstrapCheckbox extends Checkbox
 	 * Generates control's HTML element.
 	 * @return Html
 	 */
-	public function getControl()
+	public function getControl(): Html
 	{
-		$el = Html::el('div')->setAttribute('class', 'checkbox ' . ($this->labelClass ?? 'checkbox-primary'));
+		$el = Html::el('div')->setAttribute(
+			'class',
+			'checkbox '
+			. ($this->labelClass ?? 'checkbox-primary')
+			. (" $this->wrapperClass" ?? '')
+		);
 		$el->insert(0, $this->getControlPart());
 		$el->insert(1, $this->getLabelPart());
 
